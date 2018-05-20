@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+            .main-container {
+                width: 70%;
+                height: 40%;
+                border-radius: 15px;
+                border: 1px solid #a1afc9;
+                box-shadow: 15px 15px 8px #4b5cc4;
+                color: #003371;
+                font-family: sans-serif;
+            }
+            .div-player-top {
+                position: relative;
+                background-image: url(top.jpg);
+                height: 250px;
+                background-size: cover;
+            }
+            #id-audio-player {
+                position: absolute;
+                opacity: 0.8;
+                width: 100%;
+                bottom: 0;
+            }
+            .player-bottom {
+                width: 100%;
+                height: 200px;
+            }
+            .div-show {
+                font-size: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .player-range {
+                display: inline-block;
+                width: 60%;
+                height: 5px;
+                background: pink;
+                border-radius: 6px;
+                margin: 0 8px;
+            }
+            .div-audio-actions {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .div-song {
+                text-align: center;
+                margin-top: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="main-container">
+            <!-- 播放器上部 -->
+            <div class="div-player-top">
+                <audio id="id-audio-player" src="0.mp3" data-songs='3' data-index='0' controls="controls">
+                </audio>
+            </div>
+
+            <!-- 播放器下部  -->
+            <section class="player-bottom">
+                <div class="div-show">
+                    <span class="span-current"></span>
+                    <span class="player-range"></span>
+                    <span class="span-total"></span>
+                </div>
+
+                <div class="div-audio-actions" >
+                    <img src="sloop.png" class="loop single-loop">
+                    <img src="loop.png" class="loop list-loop">
+
+                    <img src="pre.png" class="audio-switch pre-song" data-offset='-1'>
+                    <img src="on.png" class="audio-on-off">
+                    <img src="next.png" class="audio-switch next-song" data-offset='1'>
+
+                    <img src="rloop.png" class="loop random-loop">
+                </div>
+
+
+                <div class="song-lists">
+                    <div class="div-song song-0" data-path="0" >示范歌曲 0</div>
+                    <div class="div-song song-1" data-path="1">示范歌曲 1</div>
+                    <div class="div-song song-2" data-path="2">示范歌曲 2</div>
+                </div>
+            </section>
+
+
+        </main>
+
+        <script src="gua.js"></script>
+        <script src="player.js"></script>
+    </body>
+</html>
