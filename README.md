@@ -6,4 +6,4 @@
 ## 5 数据可视化（和风天气API，ECharts实现） Demo
 
 test
-![](https://github.com/nbhaohao/FePractice/blob/master/qaDemo/qaDemo.gif "qademo")
+![](https://github.com/mollylee123/Front-End-Practise/blob/master/todo/todo%E5%BD%95%E9%A2%91.mp4)
