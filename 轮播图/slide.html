@@ -1,0 +1,97 @@
+<!-- 作业 1
+在上课代码的基础上实现点击小圆点切换图片显示功能
+    0, 在上课代码的基础上实现这个功能, 在小圆点标签中添加 data-index 属性表示下标
+    1, 点击小圆点的时候 找到下标
+    2, 用这个下标切换图片显示
+    3, 如果有问题, 可以  在群里讨论 -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            .main-slide {
+                position: relative;
+                width: 590px;
+                margin: 0 auto;
+            }
+            .main-slide-img {
+                width: 590px;
+                height: 470px;
+                display: none;
+            }
+            .active {
+                display: inline-block;
+            }
+            .div-slide-indicators {
+                /* 居中套路 */
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 1px solid white;
+                border-radius: 30px;
+                padding: 0 10px;
+            }
+            .main-slide-indi {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: red;
+            }
+            .dot-white {
+                background: white;
+            }
+            /* angle */
+            .button-angle {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 40px;
+                border: 1px solid transparent;
+                background: #c0c6c9;
+                opacity: 0.6;
+            }
+            .slide-left {
+                left: 0;
+            }
+            .slide-right {
+                right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="main-slide" data-imgs='8' data-index='0'>
+            <!-- angle -->
+            <div class="div-angles">
+                <button class="button-angle slide-left" data-offset='-1'>&lt;</button>
+                <button class="button-angle slide-right" data-offset='1'>&gt;</button>
+            </div>
+            <!-- pic -->
+            <div >
+                <img id="id-img-0" class="main-slide-img active" src="0.jpg" alt="0.jpg">
+                <img id="id-img-1" class="main-slide-img" src="1.jpg" alt="1.jpg">
+                <img id="id-img-2" class="main-slide-img" src="2.jpg" alt="2.jpg">
+                <img id="id-img-3" class="main-slide-img" src="3.jpg" alt="3.jpg">
+                <img id="id-img-4" class="main-slide-img" src="4.jpg" alt="4.jpg">
+                <img id="id-img-5" class="main-slide-img" src="5.jpg" alt="5.jpg">
+                <img id="id-img-6" class="main-slide-img" src="6.jpg" alt="6.jpg">
+                <img id="id-img-7" class="main-slide-img" src="7.jpg" alt="7.jpg">
+            </div>
+            <!-- dot -->
+            <div class="div-slide-indicators">
+                <div id="id-indi-0" class="main-slide-indi dot-white" data-index="0"></div>
+                <div id="id-indi-1" class="main-slide-indi" data-index="1"></div>
+                <div id="id-indi-2" class="main-slide-indi" data-index="2"></div>
+                <div id="id-indi-3" class="main-slide-indi" data-index="3"></div>
+                <div id="id-indi-4" class="main-slide-indi" data-index="4"></div>
+                <div id="id-indi-5" class="main-slide-indi" data-index="5"></div>
+                <div id="id-indi-6" class="main-slide-indi" data-index="6"></div>
+                <div id="id-indi-7" class="main-slide-indi" data-index="7"></div>
+            </div>
+        </section>
+        <script src="slide.js"></script>
+    </body>
+</html>
