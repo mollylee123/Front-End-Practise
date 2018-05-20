@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>md editor</title>
+        <script src="https://cdn.bootcss.com/remarkable/1.7.1/remarkable.js"></script>
+    </head>
+    <body>
+        <textarea id="id-source"></textarea>
+        <div id="id-content">
+
+        </div>
+        <script>
+            var e = function(sel) {
+                return document.querySelector(sel)
+            }
+            var md = new Remarkable()
+            e('#id-source').addEventListener('keyup',function(event) {
+                var src = event.target.value
+                var content = md.render(src)
+                e('#id-content').innerHTML = content
+            })
+        </script>
+    </body>
+</html>
